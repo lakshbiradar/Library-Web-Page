@@ -1,0 +1,479 @@
+/*
+Biradar, Lakshmi
+Red_ID: 825975651
+CS545_00
+Assignment #4
+Fall 2020
+Instructor:Cyndi Chie
+*/
+
+/* Generic Styles */
+body
+{
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12pt;
+padding: 40px;
+margin: 0px;
+min-width: 200px;
+}
+/* Generic style for all Sections */
+section
+{
+    padding: 15px 30px;
+    overflow:hidden;
+    
+}
+/* Generic Style for Header h1 */
+h1{
+    padding: 10px;
+    font-size: 34pt;
+    text-align: center;
+    color: rgb(184, 163, 124);
+    width: 100%;
+    font-style: italic;    
+}
+/* Generic Style for Header h2 */
+h2
+{
+    padding:10px;
+    font-size: 20pt;
+    color: darkslategrey;
+
+}
+/* Generic Style for Header h3 */
+h3
+{
+    padding:10px;
+    font-size: 16pt;
+    color: darkslategrey;
+}
+/* Common Header Style for all pages */
+header
+{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+header div
+{
+    overflow: hidden;
+}
+/* Styles for logo on Header of website */
+header div img
+{
+    padding: 0 10px;
+    margin:0;
+    border: 0;
+    height:217px;
+    width: 250px;
+}
+.flex-container
+{
+    display: flex;
+    background-color: rgb(241, 239, 239);
+    padding: 0;
+    margin:0;
+    flex-flow: row wrap;
+}
+
+
+/*Navigation Styles & list Styles*/
+
+nav 
+{
+    border-top: 1px solid white;
+    background-color: black;
+    float: left;
+    width: 100%;
+    height: auto;
+    
+}
+
+nav ul
+{
+   
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    list-style: none;
+}
+
+
+
+nav ul li
+{
+    padding: 10px 10px;
+    display: inline-block;
+
+}
+/* Styles to change color on hover for links on Footer and Navigation */
+nav ul li a:hover, .infoot a:hover
+{
+    visibility: visible;
+    text-decoration: none;
+    color: white;
+    
+}
+/* Styles for hovers on Dropdown on Navigation Bar */
+ul li:hover > ul, ul li ul:hover
+{
+    display: block;
+    visibility: visible;
+    background-color: black;
+
+}
+nav ul li a, .infoot a
+{
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(197, 179, 120);
+}
+/* Style to highlight the current page */
+.active > a, .active a:hover
+{
+    color: white;
+}
+/*Styles for Dropdown on Navigation*/
+ul li ul
+{
+    visibility: hidden;
+    min-width: auto;
+    position: absolute;
+    display:none;
+}
+.nostyle ul li
+{ 
+list-style-type: none;
+padding: 15px;
+}
+
+.list-style:not(:last-of-type)
+{
+ width: 90%;
+ overflow: auto;
+ border-bottom: 1px dotted lightslategray;
+}
+.list-style
+{
+    width: 90%;
+}
+
+/* Footer Styles*/
+footer  {
+    clear: both;
+    background-color: black;
+    color: rgb(197, 179, 120);
+    font-size: 14pt;
+    padding: 15px  15px;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* Common Styles for Header, Paragraph and list in Footer */
+footer h2, footer p, footer ul
+{
+    font-size: 14pt;
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
+/* Styles for color change on Heading */
+footer h2
+{
+    color: white;
+    padding: 0 0 10px 0;
+}
+/* Generic Footer styles*/
+.infoot
+{
+    margin:0;
+    float: left;
+    padding: 10px 10px;
+    width: 30%;
+    list-style: none;
+}
+
+/*Section Styles */
+/*Styles for pages using multiple coloumns*/
+.col-1_2
+{ 
+
+    float: left;
+    padding: 10px 20px;
+    text-align: justify;
+    width:60%;
+    height: auto;
+    
+}
+/*Styles for pages using multiple coloumns*/
+.col-1_1
+{
+float: right;
+width: 30%;
+padding: 10px 20px;
+text-align: justify;
+}
+/*Styles for div on pages using multiple coloumns*/
+.col-1_1 div
+{
+    background-color: darkgray;
+    padding: 10px;
+    margin: 10px;
+    width: 140px;
+    font-size: 13pt;
+}
+/* Style to convert list in 2*2 form */
+.row
+{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 15px;
+    width: 100%;
+}
+.row li
+{
+    width: 40%;
+    padding: 20px;
+
+}
+/*Style for paragraph and header in row section*/
+.row p, .row h3
+{
+    padding:0;
+    margin:10px 0;
+    font-size: 12pt;
+}
+/* Styles for page containing equi coloumns  */
+.flex-cl
+{
+    flex:1;
+    margin: 10px;
+    padding: 15px;
+    text-align: justify;
+}
+/* Styles for image on page containing equi coloumns  */
+.flex-cl img
+{
+    height:180px;
+    width: 250px;
+}
+.contain
+{
+    margin: auto;
+    width: 80%;
+    padding:10px;
+    text-align: justify;
+    list-style-type: none;
+}
+/* Design for unordered list with the contain class */
+.contain ul
+{
+    list-style: none;
+    padding:0;
+    margin: 0;
+    text-align: justify;
+}
+.contain ul li.icon::before
+{
+    content: '';
+    height: 40px;
+    width : 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("image/icon.png");
+    background-size: 50px;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+    padding-bottom: 10px;
+}
+
+/* Aside Styles */
+ aside
+ {
+     float: right;
+     width: 30%
+ }
+/* Divider Styles*/
+.divider
+{
+    color: darkgray;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.divider:after , .divider:before
+{
+content: "";
+vertical-align: middle;
+display: inline-block;
+width:50%;
+border-bottom: 1px dotted #ccc;
+margin:0 2% 0 -50%;
+}
+    .divider:after{
+        margin:0 -50% 0 2%;
+    }
+/* Styles for bottom border of the Header  */
+.borderbottom
+{
+    border-bottom: 1px solid lightgray;
+    padding:10px 0;
+}
+
+/* Image Styles */
+/* Image to float left on page */
+.img-left
+{ 
+    float: left;
+    margin-bottom: 10px;
+    
+}
+/* Default styles for Image */
+img
+{
+    width: 300px;
+    height: 250px;
+    padding-right: 20px;
+}
+/* Image styles for images on pages using row */
+.row img
+{
+width: 300px;
+height: 250px;
+vertical-align: middle;
+}
+
+.image
+{
+    width: 200px;
+    height: 180px;
+}
+/* Style for Navbar to fix at top - Extra Feature */
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width:calc(100% - 80px);
+  }
+  
+  
+/* Style for accordion- to display section on click  - Extra Feature*/
+  .accordion {
+    background-color:  rgb(241, 239, 239);
+    color: black;
+    cursor: pointer;
+    padding: 12px 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    transition: 0.2s;
+    outline: none;
+  }
+  .active1, .accordion:hover {
+    background-color:  rgb(241, 239, 239);
+  }
+ /* Style to display + and styles for accordion*/
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 15px;
+}
+/* Style to display - and styles for accordion*/
+.active1:after {
+  content: "\2212";
+}
+  
+  .panel {
+    padding: 10px 20px;
+    display: none;
+    background-color: rgb(241, 239, 239);
+    overflow: hidden;
+  }
+/* Style for slides on carousel to disappear slide. */
+  .Slides {display: none;}
+  
+
+/* Styles for images on Carousel/Slideshow on About us page - Extra Feature*/
+  .imgslide
+  {
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+/* style for number text on Carousel Image */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+ 
+  .carousel {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+/* Style for color change as Indicator on Carousel */
+.active2 {
+    background-color: rgb(59, 115, 199) !important;
+  }
+/* Style to display the indicator on carousel to display as dot */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(163, 169, 172);
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+  }
+  .indicator
+  {
+    text-align:center;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+
+/* Media Queries */
+@media screen and (max-width: 800px)
+{
+    h1 {font-size:28pt;}
+    h2 {font-size:20pt;}
+    h3 {font-size:16pt;}
+    p {font-size:12pt;}
+    li {font-size:12pt;}
+    .flex-cl {flex-basis: 100%;}
+}
+@media screen and (max-width: 950px)
+{
+    .flex-cl {clear: both;}
+    .aside, .col-1_1 {clear:both; flex-basis: 100%;}
+    .col-1_2 {flex-basis:100%;}
+    .row li {flex-basis: 100%;}
+    
+}
+
+@media screen and (max-width: 750px)
+{
+    h1 {font-size: 22pt;}
+    h2 {font-size: 18pt;}
+    h3 {font-size: 16pt;}
+    .infoot {width:100%;}
+}

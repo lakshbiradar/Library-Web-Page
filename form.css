@@ -1,0 +1,92 @@
+/*
+Biradar, Lakshmi
+Red_ID: 825975651
+CS545_00
+Assignment #4
+Fall 2020
+Instructor:Cyndi Chie
+*/
+
+
+/* Table Style */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px;
+}
+.table td, .table th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+/* Style for process  page */
+  .form2 {
+
+    margin: 10px;
+
+  }
+  legend
+  {
+  color: rgb(91, 128, 197);
+  }
+
+  /* Error Styling */
+  .error {
+    color: red;
+  }
+
+/* Signup Form Styling */
+.form_style div
+{
+margin-left: 10px;
+margin-top: 10px;
+}
+/* Styles for text Area on form */
+  .form_style textarea
+  {
+    Border: 1px solid black; 
+    margin-left: 10px;
+  }
+
+/* Styles for input of type checkbox on the form */
+  .form_style input[type="checkbox"]
+  {
+height: 14px;
+width: 14px;
+  }
+/* Styles for button on Form*/
+  .form_style input[type="submit"]{
+    background-color:#326fe0;
+    border: none;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    
+  }
+/* Styles for dropdown on form */
+  .form_style select
+  {
+    Border: 1px solid black;
+    height: 25px;
+  }
+
+/* Generic styles for labels on Forms */
+  label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    width: Auto;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+/* Style for input type not including checkbox on the form*/
+  input:not([type ='checkbox']), select{
+    Border: 1px solid black;
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 10px;
+  }
+  
